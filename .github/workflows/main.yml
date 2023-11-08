@@ -18,6 +18,7 @@ push:
 
       build:
         name: Build Docker image for deployment
+        needs: test
         runs-on: ubuntu-latest # specify the build machine
         steps:
           - # checkout to the repository on the build machine
