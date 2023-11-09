@@ -13,11 +13,14 @@ jobs:
     steps:
       - name: Run assert checks
         uses: actions/checkout@v4
-      - run: sh hello_world.sh
+      - run: |
+          sh hello_world.sh
+          exit 1
 
 
   build:
     name: Build Docker image
+    needs: test
     runs-on: ubuntu-latest # specify the build machine
     steps:
       - name: Checkout
