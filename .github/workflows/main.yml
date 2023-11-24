@@ -38,4 +38,4 @@ jobs:
           context: .
           file: ./Dockerfile
           push: true
-          tags: $/stack-demo:latest
+          tags: ${{ secrets.DOCKERHUB_USERNAME }}/stack-demo:latest
